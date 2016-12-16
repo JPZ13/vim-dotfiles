@@ -1,32 +1,7 @@
-# dot-vim
+# Vim dotfiles
 
-My vim dotfiles.
+I watched a presentation by @rdegges, and he convinced me to use Vim.
+This repo is my setup, which is a forked version of his with my own
+personal tweaks. I would suggest downloading the original rather than mine.
 
-These are primarily optimized for my own personal usage, but feel free to use
-them for whatever you'd like.
-
-They're geared towards Python web development, and contain niceties which make
-writing code using the following tools much simpler:
-
-- Python
-- HTML
-- Javascript
-- Git
-
-
-## Installation
-
-The below commands will download the project, and install all Vim plugins and
-dependencies.
-
-**NOTE**: These instructions assume you already have `vim` installed on your operating
-system.
-
-``` bash
-$ git clone https://github.com/rdegges/dot-vim.git ~/.vim
-$ ln -s ~/.vim/vimrc ~/.vimrc
-$ cd ~/.vim
-$ git submodule init
-$ git submodule update
-$ vim +PluginInstall +qall
-```
+His repo is here: https://github.com/rdegges/dot-vim.git ~/.vim
