@@ -1,15 +1,15 @@
 snippet strict "Enable strict mode." b
-"use strict";
+'use strict';
 endsnippet
 
 snippet r "Require a module." b
-const ${1} = require("${0:$1}");
+const ${1} = require('${0:$1}');
 endsnippet
 
 snippet e "A minimal Express.js server." b
-"use strict";
+'use strict';
 
-const express = require("express");
+const express = require('express');
 
 let app = express();
 
@@ -17,18 +17,30 @@ app.listen(process.env.PORT || 3000);
 endsnippet
 
 snippet esp "A minimal Stormpath server." b
-var express = require("express");
-var stormpath = require("express-stormpath");
+const express = require('express');
+const stormpath = require('express-stormpath');
 
-var app = express();
+let app = express();
 
 app.use(stormpath.init(app));
 
-app.on("stormpath.ready", () => {
+app.on('stormpath.ready', () => {
   app.listen(process.env.PORT || 3000);
 });
 endsnippet
 
 snippet l "Log some text." b
-console.log("${1}");
+console.log('${1}');
+endsnippet
+
+snippet f "Basic function." b
+const ${1} = function(${0}) {
+  
+};
+endsnippet
+
+snippet a "Arrow function." b
+const ${1} = (${0}) => {
+  
+};
 endsnippet

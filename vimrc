@@ -42,6 +42,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-surround'
+Plugin 'matze/vim-move'
+Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdTree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 
@@ -93,9 +99,9 @@ set undoreload=10000            " Maximum number lines to save for undo on a buf
 set autoindent                  " Copy indent from current line when starting a new line.
 set smartindent                 " Do smart autoindenting when starting a new line.
 set smarttab                    " A <tab> in front of a line inserts spaces.
-set shiftwidth=4                " Number of spaces to use for each step of autoindent.
-set softtabstop=4               " Number of spaces that a <tab> counts for while editing.
-set tabstop=4                   " Number of spaces that a <tab> in the file counts for.
+set shiftwidth=2                " Number of spaces to use for each step of autoindent.
+set softtabstop=2               " Number of spaces that a <tab> counts for while editing.
+set tabstop=2                   " Number of spaces that a <tab> in the file counts for.
 set expandtab                   " Use the appropriate number of spaces to insert a <tab>.
 
 " Set smaller tab settings for HTML type stuff.
@@ -167,7 +173,7 @@ nnoremap <leader>V :VimroomToggle<cr>
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_flake8_post_args = "--ignore=E251,E128,E501"
-"let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " ========== vim-gitgutter ==========
 
@@ -190,3 +196,12 @@ let g:user_emmet_leader_key='<C-e>'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" ========== Pathogen ===========
+" execute pathogen#infect()
+
+" ========== vim-move ===========
+let g:move_key_modifier= 'C'
+
+" ========== JSX ===========
+let g:jsx_ext_required = 0
