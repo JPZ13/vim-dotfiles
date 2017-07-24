@@ -2,6 +2,8 @@
 " first, because it changes other options as a side effect.
 set nocompatible
 
+" Set clipboard - MacOS"
+set clipboard=unnamed
 
 " ========== Vundle Initialization ==========
 " Required for Vundle to work properly. Disabled file type detection.
@@ -38,7 +40,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'moll/vim-node'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'othree/html5.vim'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-surround'
@@ -205,3 +207,7 @@ let g:move_key_modifier= 'C'
 
 " ========== JSX ===========
 let g:jsx_ext_required = 0
+
+" ========== Golint ===========
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
