@@ -50,6 +50,7 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+" Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 
@@ -188,6 +189,7 @@ set rtp+=~/.vim/bundle/vim-golang/
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+let g:go_fmt_command = "goimports"
 
 " ========== emmet ==========
 let g:user_emmet_install_global = 1
