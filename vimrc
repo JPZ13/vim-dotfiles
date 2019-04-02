@@ -212,4 +212,7 @@ let g:jsx_ext_required = 0
 
 " ========== Golint ===========
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
-autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
+autocmd BufWritePost,FileWritePost *.go execute 'GoLint' | cwindow
+
+" ========== NerdTree ==========
+let g:NERDTreeWinSize=20
