@@ -50,6 +50,8 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 " Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
@@ -189,6 +191,10 @@ set rtp+=~/.vim/bundle/vim-golang/
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+let g:go_metalinter_command='golangci-lint'
+let g:go_metalinter_autosave=1
+let g:go_metalinter_autosave_enabled = ['govet', 'errcheck', 'staticcheck', 'unused', 'gosimple', 'structcheck', 'varcheck', 'ineffassign', 'deadcode', 'typecheck']
+let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
 
 " ========== emmet ==========
@@ -209,10 +215,8 @@ let g:move_key_modifier= 'C'
 
 " ========== JSX ===========
 let g:jsx_ext_required = 0
-
-" ========== Golint ===========
-set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
-autocmd BufWritePost,FileWritePost *.go execute 'GoLint' | cwindow
+let g:typescript_indent_disable = 1
 
 " ========== NerdTree ==========
+let NERDTreeShowHidden=1
 let g:NERDTreeWinSize=20
