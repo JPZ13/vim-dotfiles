@@ -52,6 +52,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'w0rp/ale'
 " Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
@@ -193,9 +194,15 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_metalinter_command='golangci-lint'
 let g:go_metalinter_autosave=1
-let g:go_metalinter_autosave_enabled = ['govet', 'errcheck', 'staticcheck', 'unused', 'gosimple', 'structcheck', 'varcheck', 'ineffassign', 'deadcode', 'typecheck']
+let g:go_metalinter_autosave_enabled = ['errcheck', 'staticcheck', 'unused', 'gosimple', 'structcheck', 'varcheck', 'ineffassign', 'deadcode']
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
+let g:go_def_mode='guru'
+let g:go_info_mode='guru'
+let g:go_referrers_mode = 'guru'
+let g:go_implements_mode = 'guru'
+let g:go_rename_command = 'gorename'
+let g:go_gopls_enabled = 0
 
 " ========== emmet ==========
 let g:user_emmet_install_global = 1
